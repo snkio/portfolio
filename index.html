@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Веб-разработчик Вячеслав Чесноков." />
+    <title>Портфолио</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://snkio.github.io/portfolio" />
+    <meta property="og:title" content="Веб-разработчик Вячеслав Чесноков" />
+    <meta property="og:description" content="Портфолио, проекты и контакты." />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <img src="img/LOGO.svg" alt="logo" class="header__logo" />
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link">Главная</a>
+            </li>
+            <li class="header__item">
+              <a href="#projects-t" class="header__link">Проекты</a>
+            </li>
+            <li class="header__item">
+              <a href="#footer-t" class="header__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <img src="img/avatar.png" alt="avatar" class="main__avatar" />
+        <div class="main__info">
+          <h1 class="main__title">Вячеслав Чесноков</h1>
+          <p class="main__desc">Веб-разработчик</p>
+        </div>
+        <div class="main__stack">
+          <div class="main__item">
+            <img src="img/HTML.svg" alt="html" class="main__icon" />
+            <p class="main__stack-text">HTML</p>
+          </div>
+          <div class="main__item">
+            <img src="img/CSS.svg" alt="css" class="main__icon" />
+            <p class="main__stack-text">CSS</p>
+          </div>
+          <div class="main__item">
+            <img src="img/JS.svg" alt="js" class="main__icon" />
+            <p class="main__stack-text">JavaScript</p>
+          </div>
+          <p class="main__others" id="others">и прочие...</p>
+          <dialog class="main__modal">
+            <p>Soon...</p>
+            <p id="close">exit</p>
+          </dialog>
+        </div>
+        <section class="main__projects projects">
+          <h2 class="projects__title" id="projects-t">Проекты</h2>
+          <div class="projects__list">
+            <div class="projects__item">
+              <div class="projects__image-box">
+                <img src="img/cars.png" alt="" class="projects__preview" />
+              </div>
+              <div class="projects__info-wrapper">
+                <p class="projects__info">
+                  Аренда автомобилей
+                  <span class="projects__info-text">Подробнее...</span>
+                </p>
+                <dialog class="projects__modal">
+                  <p>Soon...</p>
+                  <p id="close">exit</p>
+                </dialog>
+              </div>
+            </div>
+            <div class="projects__item">
+              <div class="projects__image-box">
+                <img src="img/survival.png" alt="" class="projects__preview" />
+              </div>
+              <div class="projects__info-wrapper">
+                <p class="projects__info">
+                  Текстовая RPG игра
+                  <span class="projects__info-text">Подробнее...</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div class="footer">
+      <div class="container">
+        <div class="footer__contact">
+          <h2 class="footer__title" id="footer-t">Контакты</h2>
+          <div class="footer__list">
+            <div class="footer__item">
+              <a
+                href="https://t.me/snkioprod"
+                target="_blank"
+                class="footer__link"
+              >
+                <img src="img/TG.svg" alt="" class="footer__item" />
+              </a>
+            </div>
+            <div class="footer__item">
+              <a href="https://github.com/snkio" class="footer__link">
+                <img src="img/GITHUB.svg" alt="" class="footer__item" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
