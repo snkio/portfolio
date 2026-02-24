@@ -15,7 +15,7 @@
     <header class="header">
       <div class="container">
         <nav class="header__nav">
-          <img src="img/LOGO.svg" alt="logo" class="header__logo" />
+          <img src="img/LOGO.svg" alt="logo" class="header__logo" id="logo" />
           <ul class="header__list">
             <li class="header__item">
               <a href="#" class="header__link">Главная</a>
@@ -51,7 +51,7 @@
             <p class="main__stack-text">JavaScript</p>
           </div>
           <p class="main__others" id="others">и прочие...</p>
-          <dialog class="main__modal">
+          <dialog class="main__modal" id="modalother">
             <p>Soon...</p>
             <p id="close">exit</p>
           </dialog>
@@ -100,18 +100,46 @@
                 target="_blank"
                 class="footer__link"
               >
-                <img src="img/TG.svg" alt="" class="footer__item" />
+                <img
+                  src="img/TG.svg"
+                  alt="telegram"
+                  class="footer__item"
+                  id="tg"
+                />
               </a>
             </div>
             <div class="footer__item">
-              <a href="https://github.com/snkio" class="footer__link">
-                <img src="img/GITHUB.svg" alt="" class="footer__item" />
+              <a
+                href="https://github.com/snkio"
+                class="footer__link"
+                target="_blank"
+              >
+                <img
+                  src="img/githubwhite.svg"
+                  alt="githubw"
+                  class="footer__item"
+                  id="githubw"
+                />
+                <img
+                  src="img/GITHUB.svg"
+                  alt="github"
+                  class="footer__item"
+                  id="github"
+                />
               </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="js/index.js"></script>
+    <div class="toggle">
+      <div class="toggle__list">
+        <div class="toggle__items">
+          <p class="toggle__info" id="theme">🌙</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/theme.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

@@ -11,14 +11,15 @@
 :root {
   --text-primary: #222;
   --text-cards: #ebebeb;
-  --bk-primary: #eaeaea;
+  --bk-primary: #fff;
+  --bk-header: #eaeaea;
   --bk-cards: #050505;
   --bk-hover: #ccc;
+  --bk-theme: #222;
   --fw-light: 300;
   --fw-bold: 700;
   --fw-extrabold: 800;
   --color-gradient: 90deg, #222 0%, #666 100%;
-  --color-gradient-sec: 90deg, #666 0%, #eaeaea 100%;
 }
 
 html {
@@ -28,10 +29,14 @@ html {
 body {
   font-family: "JetBrains Mono", "Consolas", monospace;
   color: var(--text-primary);
+  background-color: var(--bk-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .header {
-  background-color: var(--bk-primary);
+  background-color: var(--bk-header);
   padding: 19px 0;
 }
 
@@ -103,9 +108,9 @@ body {
   align-items: center;
   padding: 7px 6px;
   border-radius: 5px;
-  background-color: var(--bk-primary);
+  background-color: #eaeaea;
   transition: background-color 0.3s ease;
-
+  color: #222;
   cursor: default;
 }
 
@@ -167,6 +172,12 @@ body {
   position: relative;
   margin-bottom: 30px;
   overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.projects__item:hover {
+  transform: scale(1.05);
 }
 
 .projects__preview {
@@ -207,7 +218,7 @@ body {
 }
 
 .footer {
-  background: var(--bk-primary);
+  background: var(--bk-header);
   margin-top: 100px;
   padding: 50px 0;
 }
@@ -222,22 +233,46 @@ body {
   margin-top: 5px;
 }
 
-dialog {
+.toggle {
+  background-color: var(--bk-theme);
   position: fixed;
-  margin: auto;
-  top: 50;
-  border: none;
-  outline: none;
-  min-width: 1200px;
-  min-height: 600px;
-  background-color: var(--bk-primary);
+  bottom: 20px;
+  border-radius: 25px;
+  right: 20px;
+  margin-left: 10px;
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
 }
 
-/* Стили для заднего фона (превью) */
+dialog {
+  margin: auto;
+  border: none;
+  outline: none;
+  max-width: 1200px;
+  background-color: var(--bk-header);
+}
+
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
 
 #close {
   cursor: pointer;
+}
+
+#theme {
+  cursor: pointer;
+}
+
+#githubw {
+  display: none;
+}
+
+:root[data-theme="dark"] {
+  --bk-header: #222222;
+  --bk-primary: #161616;
+  --text-primary: #fff;
+  --bk-theme: #fff;
+  --color-gradient: 90deg, #fff 0%, #666 100%;
 }
