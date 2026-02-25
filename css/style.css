@@ -245,22 +245,56 @@ body {
   font-size: 30px;
 }
 
-dialog {
+.dialog {
   margin: auto;
+  max-width: 600px;
+  padding: 30px;
+  color: var(--text-primary);
+  background-color: var(--bk-header);
   border: none;
   outline: none;
-  max-width: 1200px;
-  background-color: var(--bk-header);
 }
 
-dialog::backdrop {
+.dialog__title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.dialog__desc {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.dialog__link {
+  position: absolute;
+  text-decoration: none;
+  color: var(--text-primary);
+  bottom: 10px;
+  border: 1px solid black;
+  opacity: 1;
+  padding: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.dialog__link:hover {
+  opacity: 0.85;
+}
+
+.dialog__close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
 
-#close {
-  cursor: pointer;
+#dclose {
+  font-size: 35px;
 }
 
+#dclose,
 #theme {
   cursor: pointer;
 }

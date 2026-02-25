@@ -1,25 +1,55 @@
-const modalother = document.querySelector("#modalother");
-const close = document.querySelector("#close");
+const dialog = document.querySelector(".dialog");
+const open = document.querySelectorAll(".open-modal");
+const close = document.querySelector("#dclose");
 
-const others = document.querySelector("#others");
-const projectInfo = document.querySelectorAll(".projects__info-text");
+const projects = {
+  other: {
+    title: "Soon",
+  },
 
-others.addEventListener("click", () => {
-  modalother.showModal();
-});
+  cars: {
+    title: "Сервис аренды премиальных авто",
+    desc: "Верстка по макету из Figma",
+    link: "https://snkio.github.io/car-rental",
+  },
 
-close.addEventListener("click", () => {
-  modalother.close();
-});
+  survival: {
+    title: "Текстовая RPG игра",
+    desc: "Простенькая RPG игра суть которого была в практике DOM",
+    link: "https://snkio.github.io/survival-game",
+  },
+};
 
-projectInfo.forEach((elem) => {
-  elem.addEventListener("click", () => {
-    modalother.showModal();
+open.forEach((elem) => {
+  elem.addEventListener("click", (event) => {
+    const id = event.currentTarget.dataset.id;
+    const data = projects[id];
+    const title = document.querySelector("#dtitle");
+    const desc = document.querySelector("#ddesc");
+    const link = document.querySelector("#dlink");
+
+    if (data.desc) {
+      desc.innerHTML = data.desc;
+      desc.style.display = "block";
+    } else {
+      desc.style.display = "none";
+    }
+
+    if (data.link) {
+      link.href = data.link;
+      link.style.display = "block";
+    } else {
+      link.style.display = "none";
+    }
+
+    title.innerHTML = data.title;
+    desc.innerHTML = data.desc;
+    link.href = data.link;
+
+    dialog.showModal();
   });
 });
 
-modalother.addEventListener("click", (event) => {
-  if (event.target === modalother) {
-    modalother.close();
-  }
+close.addEventListener("click", () => {
+  dialog.close();
 });

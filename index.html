@@ -50,11 +50,7 @@
             <img src="img/JS.svg" alt="js" class="main__icon" />
             <p class="main__stack-text">JavaScript</p>
           </div>
-          <p class="main__others" id="others">и прочие...</p>
-          <dialog class="main__modal" id="modalother">
-            <p>Soon...</p>
-            <p id="close">exit</p>
-          </dialog>
+          <p class="main__others open-modal" data-id="other">и прочие...</p>
         </div>
         <section class="main__projects projects">
           <h2 class="projects__title" id="projects-t">Проекты</h2>
@@ -66,12 +62,10 @@
               <div class="projects__info-wrapper">
                 <p class="projects__info">
                   Аренда автомобилей
-                  <span class="projects__info-text">Подробнее...</span>
+                  <span class="projects__info-text open-modal" data-id="cars"
+                    >Подробнее...</span
+                  >
                 </p>
-                <dialog class="projects__modal">
-                  <p>Soon...</p>
-                  <p id="close">exit</p>
-                </dialog>
               </div>
             </div>
             <div class="projects__item">
@@ -81,7 +75,11 @@
               <div class="projects__info-wrapper">
                 <p class="projects__info">
                   Текстовая RPG игра
-                  <span class="projects__info-text">Подробнее...</span>
+                  <span
+                    class="projects__info-text open-modal"
+                    data-id="survival"
+                    >Подробнее...</span
+                  >
                 </p>
               </div>
             </div>
@@ -132,6 +130,12 @@
         </div>
       </div>
     </div>
+    <dialog class="dialog">
+      <h2 class="dialog__title" id="dtitle"></h2>
+      <div class="dialog__desc" id="ddesc"></div>
+      <a class="dialog__link" id="dlink" href="#" target="_blank">Посмотреть</a>
+      <div class="dialog__close" id="dclose">&times;</div>
+    </dialog>
     <div class="toggle">
       <div class="toggle__list">
         <div class="toggle__items">
