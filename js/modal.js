@@ -4,18 +4,18 @@ const close = document.querySelector("#dclose");
 
 const projects = {
   other: {
-    title: "Soon",
+    title: "In progress...",
   },
 
   cars: {
     title: "Сервис аренды премиальных авто",
-    desc: "Верстка по макету из Figma",
+    desc: "Верстка сайта по макету из Figma с добавлением логики",
     link: "https://snkio.github.io/car-rental",
   },
 
   survival: {
     title: "Текстовая RPG игра",
-    desc: "Простенькая RPG игра суть которого была в практике DOM",
+    desc: "Суть игры заключается в наборе очков, изначально была создана для практики DOM-элементов",
     link: "https://snkio.github.io/survival-game",
   },
 };

@@ -242,6 +242,7 @@ body {
 }
 
 .footer__item {
+  flex-direction: row;
   max-width: 40px;
   margin-top: 5px;
 }
@@ -260,12 +261,16 @@ body {
 
 .dialog {
   margin: auto;
-  max-width: 600px;
-  padding: 30px;
+  min-width: 600px;
+  min-height: 200px;
   color: var(--text-primary);
   background-color: var(--bk-header);
   border: none;
   outline: none;
+}
+
+.dialog__wrapper {
+  padding: 20px;
 }
 
 .dialog__title {
@@ -325,7 +330,20 @@ body {
   --color-gradient: 90deg, #fff 0%, #666 100%;
 }
 
+body:has(.dialog:modal) {
+  overflow: hidden;
+}
+
 @keyframes sliderRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 960px) {
@@ -344,7 +362,7 @@ body {
 
 @media (max-width: 768px) {
   .header__list {
-    visibility: hidden;
+    display: block;
     position: absolute;
     flex-direction: column;
     padding: 20px;
@@ -355,19 +373,18 @@ body {
     background-color: var(--bk-header);
     box-shadow: var(--box-shadow);
     opacity: 0;
-    transition:
-      opacity 0.3s ease,
-      visibility 0.3s ease;
+    transition: opacity 0.3s ease;
   }
 
   .header__list.active {
-    visibility: visible;
+    animation: sliderRight 0.3s ease-out forwards;
     opacity: 1;
   }
 
   .header__burger {
     display: block;
     position: absolute;
+    color: var(--text-primary);
     padding: 5px;
     right: 40px;
   }
