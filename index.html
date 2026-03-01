@@ -3,18 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Веб-разработчик Вячеслав Чесноков." />
+    <meta
+      name="description"
+      content="Frontend-разработчик Вячеслав Чесноков."
+    />
     <title>Портфолио</title>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://snkio.github.io/portfolio" />
-    <meta property="og:title" content="Веб-разработчик Вячеслав Чесноков" />
+    <meta
+      property="og:title"
+      content="Frontend-разработчик Вячеслав Чесноков"
+    />
     <meta property="og:description" content="Портфолио, проекты и контакты." />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <nav class="header__nav">
+      <nav class="header__nav">
+        <div class="container header__container">
           <img src="img/LOGO.svg" alt="logo" class="header__logo" id="logo" />
           <button class="header__burger" id="burgerBtn">&#8801;</button>
           <ul class="header__list">
@@ -22,76 +28,189 @@
               <a href="#" class="header__link">Главная</a>
             </li>
             <li class="header__item">
-              <a href="#projects-t" class="header__link">Проекты</a>
+              <a href="#navproject" class="header__link">Проекты</a>
             </li>
             <li class="header__item">
-              <a href="#footer-t" class="header__link">Контакты</a>
+              <a href="#navfooter" class="header__link">Контакты</a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
     <main class="main">
-      <div class="container">
-        <img src="img/avatar.png" alt="avatar" class="main__avatar" />
-        <div class="main__info">
-          <h1 class="main__title">Вячеслав Чесноков</h1>
-          <p class="main__desc">Веб-разработчик</p>
+      <section class="hero">
+        <div class="container hero__container">
+          <img src="img/avatar.png" alt="avatar" class="main__avatar" />
+          <div class="main__info">
+            <h1 class="main__title">Вячеслав Чесноков</h1>
+            <h2 class="main__desc">Frontend-разработчик</h2>
+            <div class="main__stack">
+              <div class="main__item">
+                <img src="img/HTML.svg" alt="html" class="main__icon" />
+                <p class="main__stack-text">HTML</p>
+              </div>
+              <div class="main__item">
+                <img src="img/CSS.svg" alt="css" class="main__icon" />
+                <p class="main__stack-text">CSS</p>
+              </div>
+              <div class="main__item">
+                <img src="img/JS.svg" alt="js" class="main__icon" />
+                <p class="main__stack-text">JavaScript</p>
+              </div>
+              <p class="main__others open-modal" data-id="other">и прочие...</p>
+            </div>
+          </div>
         </div>
-        <div class="main__stack">
-          <div class="main__item">
-            <img src="img/HTML.svg" alt="html" class="main__icon" />
-            <p class="main__stack-text">HTML</p>
-          </div>
-          <div class="main__item">
-            <img src="img/CSS.svg" alt="css" class="main__icon" />
-            <p class="main__stack-text">CSS</p>
-          </div>
-          <div class="main__item">
-            <img src="img/JS.svg" alt="js" class="main__icon" />
-            <p class="main__stack-text">JavaScript</p>
-          </div>
-          <p class="main__others open-modal" data-id="other">и прочие...</p>
-        </div>
-        <section class="main__projects projects">
-          <h2 class="projects__title" id="projects-t">Проекты</h2>
+      </section>
+      <section class="projects">
+        <div class="container projects__container">
+          <h2 class="projects__title" id="navproject">Проекты</h2>
           <div class="projects__list">
-            <div class="projects__item">
+            <div class="projects__elem">
               <div class="projects__image-box">
-                <img src="img/cars.png" alt="" class="projects__preview" />
+                <img
+                  src="img/cars.png"
+                  alt="Карточка автомобили"
+                  class="projects__img"
+                />
+
+                <div class="projects__overlay">
+                  <div class="projects__icon">
+                    <a
+                      href="https://github.com/snkio/car-rental"
+                      target="_blank"
+                    >
+                      <img
+                        src="img/GITHUB.svg"
+                        alt="Github"
+                        class="projects__link"
+                      />
+                    </a>
+                  </div>
+                  <div class="projects__icon">
+                    <a
+                      href="https://snkio.github.io/car-rental"
+                      target="_blank"
+                    >
+                      <img
+                        src="img/play.svg"
+                        alt="Live Demo"
+                        class="projects__link"
+                      />
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="projects__info-wrapper">
-                <p class="projects__info">
-                  Аренда автомобилей
-                  <span class="projects__info-text open-modal" data-id="cars"
-                    >Подробнее...</span
-                  >
+              <div class="projects__box">
+                <h3 class="projects__subtitle">Проект автомобили</h3>
+                <p class="projects__desc">
+                  Верстка сайта по макету из Figma с добавлением логики
                 </p>
+                <div class="projects__stack">
+                  <div class="projects__stack-elem">
+                    <img
+                      src="img/HTML.svg"
+                      alt="html"
+                      class="projects__stack-icon"
+                    />
+                    <p class="projects__text">HTML</p>
+                  </div>
+                  <div class="projects__stack-elem">
+                    <img
+                      src="img/CSS.svg"
+                      alt="css"
+                      class="projects__stack-icon"
+                    />
+                    <p class="projects__text">CSS</p>
+                  </div>
+                  <div class="projects__stack-elem">
+                    <img
+                      src="img/JS.png"
+                      alt="js"
+                      class="projects__stack-icon"
+                    />
+                    <p class="projects__text">JavaScript</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="projects__item">
+            <div class="projects__elem">
               <div class="projects__image-box">
-                <img src="img/survival.png" alt="" class="projects__preview" />
+                <img
+                  src="img/survival.png"
+                  alt="Карточка автомобили"
+                  class="projects__img"
+                />
+
+                <div class="projects__overlay">
+                  <div class="projects__icon">
+                    <a
+                      href="https://github.com/snkio/car-rental"
+                      target="_blank"
+                    >
+                      <img
+                        src="img/GITHUB.svg"
+                        alt="Github"
+                        class="projects__link"
+                      />
+                    </a>
+                  </div>
+                  <div class="projects__icon">
+                    <a
+                      href="https://snkio.github.io/car-rental"
+                      target="_blank"
+                    >
+                      <img
+                        src="img/play.svg"
+                        alt="Live Demo"
+                        class="projects__link"
+                      />
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="projects__info-wrapper">
-                <p class="projects__info">
-                  Текстовая RPG игра
-                  <span
-                    class="projects__info-text open-modal"
-                    data-id="survival"
-                    >Подробнее...</span
-                  >
+              <div class="projects__box">
+                <h3 class="projects__subtitle">Текстовая RPG игра</h3>
+                <p class="projects__desc">
+                  Суть игры заключается в наборе очков, изначально была создана
+                  для практики DOM-элементов
                 </p>
+                <div class="projects__stack">
+                  <div class="projects__stack-elem">
+                    <img
+                      src="img/HTML.svg"
+                      alt="html"
+                      class="projects__stack-icon"
+                    />
+                    <p class="projects__text">HTML</p>
+                  </div>
+                  <div class="projects__stack-elem">
+                    <img
+                      src="img/CSS.svg"
+                      alt="css"
+                      class="projects__stack-icon"
+                    />
+                    <p class="projects__text">CSS</p>
+                  </div>
+                  <div class="projects__stack-elem">
+                    <img
+                      src="img/JS.png"
+                      alt="js"
+                      class="projects__stack-icon"
+                    />
+                    <p class="projects__text">JavaScript</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <div class="footer">
-      <div class="container">
+      <div class="container footer__container">
         <div class="footer__contact">
-          <h2 class="footer__title" id="footer-t">Контакты</h2>
+          <h2 class="footer__title" id="navfooter">Контакты</h2>
           <div class="footer__list">
             <div class="footer__item">
               <a
@@ -110,15 +229,9 @@
             <div class="footer__item">
               <a
                 href="https://github.com/snkio"
-                class="footer__link"
                 target="_blank"
+                class="footer__link"
               >
-                <img
-                  src="img/githubwhite.svg"
-                  alt="githubw"
-                  class="footer__item"
-                  id="githubw"
-                />
                 <img
                   src="img/GITHUB.svg"
                   alt="github"
