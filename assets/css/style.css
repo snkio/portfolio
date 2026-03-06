@@ -34,9 +34,7 @@ body {
   background-color: var(--bk-primary);
   line-height: 1.5;
   font-size: 1.6rem;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+  transition: 0.3s;
 }
 
 .container {
@@ -313,9 +311,14 @@ body {
   border-radius: 20px;
   right: 2rem;
   margin-left: 1rem;
-  padding: 0.5rem;
   text-align: center;
   font-size: 3rem;
+}
+
+.toggle__items {
+  width: 100%;
+  line-height: 1.2;
+  padding: 0.5rem;
 }
 
 .dialog {
@@ -380,13 +383,25 @@ body {
   display: none;
 }
 
-:root[data-theme="dark"] {
+[data-theme="dark"] {
   --bk-header: rgba(34, 34, 34, 0.7);
   --bk-primary: #161616;
   --text-primary: #fff;
   --bk-theme: #fff;
   --box-shadow: 0 5px 5px rgba(255, 255, 255, 0.1);
   --color-gradient: 90deg, #fff 0%, #666 100%;
+}
+
+#logo,
+#tg,
+#github {
+  transition: filter 0.3s ease;
+}
+
+[data-theme="dark"] #logo,
+[data-theme="dark"] #tg,
+[data-theme="dark"] #github {
+  filter: invert(1);
 }
 
 body:has(.dialog:modal) {
