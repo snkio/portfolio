@@ -23,3 +23,7 @@ This is my personal portfolio website, showcasing my skills and projects.
 - `src/js/` for logic
 - `src/assets/images/` for images
 - `src/assets/fonts/` for fonts
+
+---
+
+<img width="1885" height="782" alt="изображение" src="https://github.com/user-attachments/assets/9bef823d-84bc-416b-adb0-da9bd8733fa2" />
