@@ -1,274 +1,206 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Frontend-разработчик Вячеслав Чесноков."
-    />
-    <title>Портфолио</title>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://snkio.github.io/portfolio" />
-    <link rel="icon" type="image/SVG+XML" href="assets/img/LOGO.svg" />
-    <meta
-      property="og:title"
-      content="Frontend-разработчик Вячеслав Чесноков"
-    />
-    <meta property="og:description" content="Портфолио, проекты и контакты." />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="src/assets/fonts/fonts.css" />
   </head>
   <body>
     <header class="header">
-      <nav class="header__nav">
-        <div class="container header__container">
-          <img
-            src="assets/img/LOGO.svg"
-            alt="logo"
-            class="header__logo"
-            id="logo"
-          />
-          <button class="header__burger" id="burgerBtn">&#8801;</button>
+      <div class="container header__container">
+        <p class="header__logo">VC</p>
+        <nav class="header__nav">
           <ul class="header__list">
-            <li class="header__item">
-              <a href="#" class="header__link">Главная</a>
+            <li class="header__elem">
+              <a href="#hero" class="header__link">Home</a>
             </li>
-            <li class="header__item">
-              <a href="#navproject" class="header__link">Проекты</a>
+            <li class="header__elem">
+              <a href="#skill" class="header__link">Skills</a>
             </li>
-            <li class="header__item">
-              <a href="#navfooter" class="header__link">Контакты</a>
+            <li class="header__elem">
+              <a href="#projects" class="header__link">Projects</a>
+            </li>
+            <li class="header__elem">
+              <a href="#contacts" class="header__link">Contact</a>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+        <button class="header__switcher">&#9728;</button>
+      </div>
     </header>
     <main class="main">
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="container hero__container">
-          <img src="assets/img/avatar.png" alt="avatar" class="main__avatar" />
-          <div class="main__info">
-            <h1 class="main__title">Вячеслав Чесноков</h1>
-            <h2 class="main__desc">Frontend-разработчик</h2>
-            <div class="main__stack">
-              <div class="main__item">
-                <img src="assets/img/HTML.svg" alt="html" class="main__icon" />
-                <p class="main__stack-text">HTML</p>
+          <div class="hero__content">
+            <p class="hero__spec">Frontend Developer</p>
+            <h1 class="hero__title">Viacheslav Chesnokov</h1>
+            <div class="hero__info">
+              <p class="hero__text">
+                Building clean, modern, and responsive interfaces brought to
+                life through smooth motion.
+              </p>
+              <div class="hero__buttons">
+                <a href="" class="hero__btn">View projects</a>
+                <a href="" class="hero__contactbtn"> Contact me </a>
               </div>
-              <div class="main__item">
-                <img src="assets/img/CSS.svg" alt="css" class="main__icon" />
-                <p class="main__stack-text">CSS</p>
+            </div>
+          </div>
+          <img src="src/assets/images/avatar.png" class="hero__avatar" alt="" />
+        </div>
+      </section>
+      <section class="skill" id="skill">
+        <div class="container skill__container">
+          <div class="skill__content">
+            <h2 class="skill__title">My skills</h2>
+            <div class="skill__grid">
+              <div class="skill__list">
+                <p class="skill__subtitle">
+                  <span>&#128187;</span> Web Development
+                </p>
+                <ul class="skill__sheets">
+                  <li class="skill__elem">
+                    <p>HTML</p>
+                  </li>
+                  <li class="skill__elem">
+                    <p>CSS / SCSS</p>
+                  </li>
+                  <li class="skill__elem">
+                    <p>JavaScript</p>
+                  </li>
+                  <li class="skill__elem">
+                    <p>BEM</p>
+                  </li>
+                </ul>
               </div>
-              <div class="main__item">
-                <img src="assets/img/JS.svg" alt="js" class="main__icon" />
-                <p class="main__stack-text">JavaScript</p>
+              <div class="skill__list">
+                <p class="skill__subtitle"><span>&#128295;</span> Tools</p>
+                <ul class="skill__sheets">
+                  <li class="skill__elem">
+                    <p>Git / GitHub</p>
+                  </li>
+                  <li class="skill__elem">
+                    <p>VS Code</p>
+                  </li>
+                  <li class="skill__elem">
+                    <p>Vite</p>
+                  </li>
+                  <li class="skill__elem">
+                    <p>Figma</p>
+                  </li>
+                  <li class="skill__elem">
+                    <p>Linux</p>
+                  </li>
+                </ul>
               </div>
-              <p class="main__others open-modal" data-id="other">и прочие...</p>
+              <div class="skill__list">
+                <p class="skill__subtitle"><span>&#128640;</span> Roadmap</p>
+                <ul class="skill__sheets">
+                  <li class="skill__elem">
+                    <p>ES6+</p>
+                  </li>
+                  <li class="skill__elem">
+                    <p>Async JS</p>
+                  </li>
+                  <li class="skill__elem">
+                    <p>React</p>
+                  </li>
+                  <li class="skill__elem">
+                    <p>TypeScript</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="projects">
-        <div class="container projects__container">
-          <h2 class="projects__title" id="navproject">Проекты</h2>
-          <div class="projects__list">
-            <div class="projects__elem">
-              <div class="projects__image-box">
-                <img
-                  src="assets/img/cars.png"
-                  alt="Карточка автомобили"
-                  class="projects__img"
-                />
-
-                <div class="projects__overlay">
-                  <div class="projects__icon">
-                    <a
-                      href="https://github.com/snkio/car-rental"
-                      target="_blank"
-                    >
-                      <img
-                        src="assets/img/GITHUB.svg"
-                        alt="Github"
-                        class="projects__link"
-                      />
-                    </a>
-                  </div>
-                  <div class="projects__icon">
-                    <a
-                      href="https://snkio.github.io/car-rental"
-                      target="_blank"
-                    >
-                      <img
-                        src="assets/img/play.svg"
-                        alt="Live Demo"
-                        class="projects__link"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="projects__box">
-                <h3 class="projects__subtitle">Проект автомобили</h3>
-                <p class="projects__desc">
-                  Верстка сайта по макету из Figma с добавлением логики
+      <section class="project" id="projects">
+        <div class="container project__container">
+          <h2 class="project__title">Featured Projects</h2>
+          <div class="project__list">
+            <div class="project__card">
+              <img src="src/assets/images/car.png" alt="car" />
+              <div class="project__text">
+                <h3>Car Rental</h3>
+                <p>
+                  This project is a responsive landing page for a premium car
+                  rental service, developed based on a Figma design. I focused
+                  on creating a clean and modern user interface that looks great
+                  on all devices, from mobile phones to desktops. As this is a
+                  frontend demonstration project, the car booking features and
+                  form submissions are simulated to show how the interface works
+                  without requiring a backend connection.
                 </p>
-                <div class="projects__stack">
-                  <div class="projects__stack-elem">
-                    <img
-                      src="assets/img/HTML.svg"
-                      alt="html"
-                      class="projects__stack-icon"
-                    />
-                    <p class="projects__text">HTML</p>
-                  </div>
-                  <div class="projects__stack-elem">
-                    <img
-                      src="assets/img/CSS.svg"
-                      alt="css"
-                      class="projects__stack-icon"
-                    />
-                    <p class="projects__text">CSS</p>
-                  </div>
-                  <div class="projects__stack-elem">
-                    <img
-                      src="assets/img/JS.png"
-                      alt="js"
-                      class="projects__stack-icon"
-                    />
-                    <p class="projects__text">JavaScript</p>
+                <div class="project__stack">
+                  <div class="project__stacklist">
+                    <p class="project__elem">HTML</p>
+                    <p class="project__elem">CSS</p>
+                    <p class="project__elem">JavaScript</p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="projects__elem">
-              <div class="projects__image-box">
-                <img
-                  src="assets/img/survival.png"
-                  alt="Карточка автомобили"
-                  class="projects__img"
-                />
-
-                <div class="projects__overlay">
-                  <div class="projects__icon">
-                    <a
-                      href="https://github.com/snkio/survival-game"
-                      target="_blank"
-                    >
-                      <img
-                        src="assets/img/GITHUB.svg"
-                        alt="Github"
-                        class="projects__link"
-                      />
-                    </a>
-                  </div>
-                  <div class="projects__icon">
-                    <a
-                      href="https://snkio.github.io/survival-game"
-                      target="_blank"
-                    >
-                      <img
-                        src="assets/img/play.svg"
-                        alt="Live Demo"
-                        class="projects__link"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="projects__box">
-                <h3 class="projects__subtitle">Текстовая RPG игра</h3>
-                <p class="projects__desc">
-                  Суть игры заключается в наборе очков, изначально была создана
-                  для практики DOM-элементов
-                </p>
-                <div class="projects__stack">
-                  <div class="projects__stack-elem">
-                    <img
-                      src="assets/img/HTML.svg"
-                      alt="html"
-                      class="projects__stack-icon"
-                    />
-                    <p class="projects__text">HTML</p>
-                  </div>
-                  <div class="projects__stack-elem">
-                    <img
-                      src="assets/img/CSS.svg"
-                      alt="css"
-                      class="projects__stack-icon"
-                    />
-                    <p class="projects__text">CSS</p>
-                  </div>
-                  <div class="projects__stack-elem">
-                    <img
-                      src="assets/img/JS.png"
-                      alt="js"
-                      class="projects__stack-icon"
-                    />
-                    <p class="projects__text">JavaScript</p>
-                  </div>
+                <div class="project__buttons">
+                  <a
+                    href="https://snkio.github.io/car-rental"
+                    class="project__btn"
+                    ><img src="src/assets/images/link.svg" alt="link" />Live
+                    Demo</a
+                  >
+                  <a href="https://github.com/car-rental" class="project__btn"
+                    ><img src="src/assets/images/GITHUB.svg" alt="" />GitHub</a
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </main>
-    <div class="footer">
-      <div class="container footer__container">
-        <div class="footer__contact">
-          <h2 class="footer__title" id="navfooter">Контакты</h2>
-          <div class="footer__list">
-            <div class="footer__item">
-              <a
-                href="https://t.me/snkioprod"
-                target="_blank"
-                class="footer__link"
-              >
-                <img
-                  src="assets/img/TG.svg"
+
+      <section class="contact" id="contacts">
+        <div class="container contact__container">
+          <h2 class="contact__title">Get in Touch</h2>
+          <div class="contact__info">
+            <a
+              class="contact__btn"
+              href="mailto:snkio.dev@gmail.com"
+              target="_blank"
+              ><img
+                src="src/assets/images/EMAIL.svg"
+                alt=""
+              />snkio.dev@gmail.com</a
+            >
+            <div class="contact__buttons">
+              <a href="https://t.me/snk1o" class="contact__btns" target="_blank"
+                ><img
+                  src="src/assets/images/TG.svg"
                   alt="telegram"
-                  class="footer__item"
-                  id="tg"
-                />
-              </a>
-            </div>
-            <div class="footer__item">
+                />Telegram</a
+              >
               <a
                 href="https://github.com/snkio"
+                class="contact__btns"
                 target="_blank"
-                class="footer__link"
-              >
-                <img
-                  src="assets/img/GITHUB.svg"
+                ><img
+                  src="src/assets/images/GITHUB.svg"
                   alt="github"
-                  class="footer__item"
-                  id="github"
-                />
-              </a>
+                />GitHub</a
+              >
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <dialog class="dialog">
-      <div class="dialog__wrapper">
-        <h2 class="dialog__title" id="dtitle"></h2>
-        <div class="dialog__desc" id="ddesc"></div>
-        <a class="dialog__link" id="dlink" href="#" target="_blank"
-          >Посмотреть</a
-        >
-        <div class="dialog__close" id="dclose">&times;</div>
-      </div>
-    </dialog>
-    <div class="toggle">
-      <div class="toggle__list">
-        <div class="toggle__items">
-          <p class="toggle__info" id="theme">🌙</p>
+      </section>
+      <span class="glow glow-one"></span>
+      <span class="glow glow-two"></span>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <p class="footer__info">&copy; 2026 Viacheslav Chesnokov</p>
+        <div class="footer__links">
+          <a href=""><img src="src/assets/images/TG.svg" alt="" /></a>
+          <a href=""><img src="src/assets/images/GITHUB.svg" alt="" /></a>
+          <a href=""><img src="src/assets/images/EMAIL.svg" alt="" /></a>
         </div>
       </div>
-    </div>
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/modal.js"></script>
-    <script src="assets/js/burger.js"></script>
+    </footer>
+    <script type="module" src="src/js/index.js"></script>
   </body>
 </html>
