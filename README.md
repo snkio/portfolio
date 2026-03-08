@@ -2,14 +2,14 @@
 
 This is my personal portfolio website, showcasing my skills and projects.
 
-[🚀 Live Preview](https://snkio.github.io/portfolio)
+[🚀 Live Preview](https://portfolio-delta-seven-9xgm2f3rgy.vercel.app/)
 
 ## 🛠️ Built With:
 
 - `HTML5`
-- `CSS3`
-- `JavaScript`
-- `Figma`
+- `SCSS`
+- `JavaScript` (In progress)
+- `Vite`
 
 ## 💫 In progress:
 
