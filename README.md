@@ -11,7 +11,7 @@ This is my personal portfolio website, showcasing my skills and projects.
 - `JavaScript`
 - `Figma`
 
-## 💫 Features:
+## 💫 In progress:
 
 - **Responsive Design:** optimized for mobile, tablet, desktops screens
 - **Dark mode/Light mode:** theme switcher with localStorage
@@ -19,6 +19,7 @@ This is my personal portfolio website, showcasing my skills and projects.
 
 ## 🗂️ Project structure:
 
-- `assets/css/` for styles
-- `assets/img/` for images
-- `assets/js/` for logic
+- `src/scss/` for styles
+- `src/js/` for logic
+- `src/assets/images/` for images
+- `src/assets/fonts/` for fonts
