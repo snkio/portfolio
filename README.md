@@ -1,8 +1,16 @@
 # 💻 Personal Portfolio
 
-This is my personal portfolio website, showcasing my skills and projects.
+<p align="center">
+  <img width="100%" alt="Preview" src="https://github.com/user-attachments/assets/9bef823d-84bc-416b-adb0-da9bd8733fa2" />
+</p>
 
-[🚀 Live Preview](https://portfolio-delta-seven-9xgm2f3rgy.vercel.app/)
+<p align="center">
+  <a href="https://portfolio-delta-seven-9xgm2f3rgy.vercel.app/">🚀 <strong>Live Preview</strong></a>
+</p>
+
+---
+
+This is my personal portfolio website, showcasing my skills and projects.
 
 ## 🛠️ Built With:
 
@@ -13,9 +21,9 @@ This is my personal portfolio website, showcasing my skills and projects.
 
 ## 💫 In progress:
 
-- **Responsive Design:** optimized for mobile, tablet, desktops screens
-- **Dark mode/Light mode:** theme switcher with localStorage
-- **Smart theme switcher** detects the system theme and syncs with it.
+- [ ] **Responsive Design:** optimized for mobile, tablet, desktops screens
+- [ ] **Dark mode/Light mode:** theme switcher with localStorage
+- [ ] **Smart theme switcher** detects the system theme and syncs with it.
 
 ## 🗂️ Project structure:
 
@@ -25,5 +33,3 @@ This is my personal portfolio website, showcasing my skills and projects.
 - `src/assets/fonts/` for fonts
 
 ---
-
-<img width="1885" height="782" alt="изображение" src="https://github.com/user-attachments/assets/9bef823d-84bc-416b-adb0-da9bd8733fa2" />
