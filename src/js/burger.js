@@ -7,7 +7,7 @@ burgermenu.addEventListener("click", () => {
 });
 
 links.forEach((e) => {
-  e.addEventListener("click", (e) => {
+  e.addEventListener("click", () => {
     navigation.classList.remove("active");
   });
 });

@@ -4,7 +4,14 @@ import "./burger.js";
 const getHTML = document.documentElement;
 const switcher = document.querySelector("#toggletheme");
 
-const savedTheme = localStorage.getItem("theme");
+const infoDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+
+let savedTheme = localStorage.getItem("theme");
+
+if (!savedTheme) {
+  savedTheme = infoDarkMode.matches ? "dark" : "light";
+}
+
 if (savedTheme === "light") {
   switcher.textContent = "🌙";
   getHTML.setAttribute("data-theme", "light");
