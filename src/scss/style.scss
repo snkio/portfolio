@@ -8,6 +8,7 @@
   --accent: plum;
   --color-primary: #fff;
   --color-primary-o: rgba(255, 255, 255, 0.6);
+  --color-skills: #fff;
   --bk-main: #161616;
   --bk-header: rgba(34, 34, 34, 0.8);
   --bk-btn: linear-gradient(to right, #008080, #9966cc, #008080);
@@ -17,6 +18,7 @@
   --bk-accent: 66, 163, 253;
   --bk-purpletwo: #533781;
   --fz-h2: 5rem;
+  --bk-stack: #353535;
 }
 
 html {
@@ -105,6 +107,7 @@ a {
     display: flex;
     list-style: none;
     gap: 15px;
+    color: var(--color-primary);
 
     &::after {
       content: "|";
@@ -114,7 +117,6 @@ a {
 
   &__link {
     text-decoration: none;
-    color: var(--color-primary);
     opacity: 0.8;
     transition: opacity 0.3s ease;
 
@@ -173,6 +175,7 @@ a {
     font-weight: 300;
     transition: opacity 0.3s ease;
     margin-bottom: 0.8rem;
+    animation: fadeIn 1s ease-out forwards;
 
     &:hover {
       opacity: 1;
@@ -254,6 +257,7 @@ a {
     justify-content: center;
     font-size: var(--fz-h2);
     position: relative;
+    animation: zoomIn 0.4s ease-out forwards;
 
     &::after {
       position: absolute;
@@ -282,13 +286,13 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    // place-items: center;
   }
 
   &__list {
     display: flex;
     height: 100%;
     align-items: center;
+    color: var(--color-skills);
     box-shadow: 0 0 3rem 0 var(--bk-main);
     flex-direction: column;
     margin-top: 4rem;
@@ -297,6 +301,7 @@ a {
     padding: 1rem;
     border: 2px solid transparent;
     border-radius: 1.5rem;
+    animation: fadeFromTop 0.7s ease-out forwards;
     transition:
       border 0.3s ease-out,
       transform 0.3s ease-out;
@@ -342,7 +347,6 @@ a {
     list-style: none;
     padding: 0.5rem;
     border-radius: 1rem;
-    color: var(--color-primary);
     background-color: rgba(var(--bk-purple), 0.5);
     border: 1px solid rgb(var(--bk-purple));
     cursor: pointer;
@@ -367,6 +371,7 @@ a {
     justify-content: center;
     font-size: var(--fz-h2);
     position: relative;
+    animation: zoomIn 0.5s ease-out forwards;
 
     &::after {
       position: absolute;
@@ -382,6 +387,9 @@ a {
   &__list {
     margin-top: 4rem;
     height: 100%;
+    animation: fadeFromLeft 1s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
   }
 
   &__card {
@@ -409,6 +417,7 @@ a {
       height: auto;
       max-width: 50rem;
       border-radius: 2rem;
+      box-shadow: 0 0 3rem 0 var(--bk-main);
     }
   }
 
@@ -432,7 +441,7 @@ a {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
     border: 1px solid transparent;
-    background: #353535;
+    background: var(--bk-stack);
     padding: 0.5rem;
     border-radius: 1.3rem;
     transition: border 0.3s ease;
@@ -493,6 +502,7 @@ a {
     font-size: var(--fz-h2);
     margin-bottom: 4rem;
     position: relative;
+    animation: zoomIn 0.5s ease-out forwards;
 
     &::after {
       position: absolute;
@@ -587,5 +597,65 @@ a {
 @media (max-width: 768px) {
   .hero__avatar {
     display: none;
+  }
+}
+
+[data-theme="light"] {
+  --bk-header: rgba(235, 235, 235, 0.7);
+  --bk-main: #f2f2f2;
+  --color-primary: #161616;
+  --color-primary-o: rgba(0, 0, 0, 0.6);
+  --bk-card: #fff;
+  --bk-stack: #ebebeb;
+}
+
+[data-theme="light"] .telegram,
+[data-theme="light"] .github,
+[data-theme="light"] .email {
+  filter: invert(1);
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
