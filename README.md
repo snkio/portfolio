@@ -19,11 +19,11 @@ This is my personal portfolio website, showcasing my skills and projects.
 - `JavaScript` (In progress)
 - `Vite`
 
-## 💫 In progress:
+## 💫 Features:
 
-- [x] **Responsive Design:** optimized for mobile, tablet, desktops screens
-- [x] **Dark mode/Light mode:** theme switcher with localStorage
-- [ ] **Smart theme switcher** detects the system theme and syncs with it.
+- **Responsive Design:** optimized for mobile, tablet, desktops screens
+- **Dark mode/Light mode:** theme switcher with localStorage
+- **Smart theme switcher** detects the system theme and syncs with it.
 
 ## 🗂️ Project structure:
 
