@@ -59,11 +59,9 @@ a {
 
 .glow {
   position: absolute;
-  width: 1px;
-  height: 1px;
   z-index: -1;
   pointer-events: none;
-
+  background: transparent;
   visibility: hidden;
 
   box-shadow: 0 0 20rem 10rem var(--bk-glow);
@@ -101,6 +99,13 @@ a {
 
   &__nav {
     margin-left: auto;
+  }
+
+  &__burger {
+    visibility: hidden;
+    background: none;
+    border: none;
+    font-size: 3rem;
   }
 
   &__list {
@@ -160,8 +165,6 @@ a {
     &::before {
       position: absolute;
       content: "";
-      width: 1px;
-      height: 1px;
       z-index: -1;
       box-shadow: 0 0 20rem 10rem var(--bk-glow);
       pointer-events: none;
@@ -273,8 +276,6 @@ a {
       position: absolute;
       content: "";
       bottom: -8rem;
-      width: 1px;
-      height: 1px;
       z-index: -1;
       box-shadow: 0 0 20rem 10rem var(--bk-glow);
       pointer-events: none;
@@ -286,6 +287,8 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+
+    justify-items: center;
   }
 
   &__list {
@@ -597,6 +600,36 @@ a {
 @media (max-width: 768px) {
   .hero__avatar {
     display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__burger {
+    position: absolute;
+    visibility: visible;
+    right: 5rem;
+  }
+
+  .header__list {
+    display: none;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bk-header);
+    padding: 2rem;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    gap: 1rem;
+    font-size: 2rem;
+  }
+
+  .header__list::after {
+    content: "";
+  }
+
+  .header__list.active {
+    display: flex;
   }
 }
 
