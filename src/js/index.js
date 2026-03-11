@@ -5,7 +5,6 @@ const getHTML = document.documentElement;
 const switcher = document.querySelector("#toggletheme");
 
 const infoDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
-
 let savedTheme = localStorage.getItem("theme");
 
 if (!savedTheme) {
@@ -20,16 +19,16 @@ if (savedTheme === "light") {
   getHTML.setAttribute("data-theme", "dark");
 }
 
-switcher.addEventListener("click", () => {
-  let currentTheme = switcher.textContent;
+function changeTheme() {
+  const getImage = switcher.textContent === "☀️" ? "🌙" : "☀️";
+  const themeNew = getImage === "🌙" ? "light" : "dark";
 
-  if (currentTheme === "☀️") {
-    switcher.textContent = "🌙";
-    getHTML.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
-  } else {
-    switcher.textContent = "☀️";
-    getHTML.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark");
-  }
-});
+  switcher.textContent = getImage;
+
+  getHTML.setAttribute("data-theme", themeNew);
+  console.log("Theme changed:", themeNew);
+
+  localStorage.setItem("theme", themeNew);
+}
+
+switcher.addEventListener("click", changeTheme);
