@@ -1,34 +1,43 @@
 import "../scss/style.scss";
 import "./burger.js";
 
-const getHTML = document.documentElement;
+const html = document.documentElement;
 const switcher = document.querySelector("#toggletheme");
 
-const infoDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
-let savedTheme = localStorage.getItem("theme");
+const getTheme = () => {
+  const saved = localStorage.getItem("theme");
 
-if (!savedTheme) {
-  savedTheme = infoDarkMode.matches ? "dark" : "light";
-}
+  if (saved) {
+    return saved;
+  } else {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  }
+};
 
-if (savedTheme === "light") {
-  switcher.textContent = "🌙";
-  getHTML.setAttribute("data-theme", "light");
-} else {
-  switcher.textContent = "☀️";
-  getHTML.setAttribute("data-theme", "dark");
-}
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (e) => {
+    if (!localStorage.getItem("theme")) {
+      currTheme = e.matches ? "dark" : "light";
+      setTheme(currTheme);
+    }
+  });
 
-function changeTheme() {
-  const getImage = switcher.textContent === "☀️" ? "🌙" : "☀️";
-  const themeNew = getImage === "🌙" ? "light" : "dark";
+const setTheme = (theme) => {
+  html.setAttribute("data-theme", theme);
+  switcher.textContent = theme === "light" ? "🌙" : "☀️";
+};
 
-  switcher.textContent = getImage;
+let currTheme = getTheme();
+setTheme(currTheme);
 
-  getHTML.setAttribute("data-theme", themeNew);
-  console.log("Theme changed:", themeNew);
+switcher.addEventListener("click", () => {
+  currTheme = currTheme === "light" ? "dark" : "light";
+  setTheme(currTheme);
+  localStorage.setItem("theme", currTheme);
+  console.log("Changed to:", currTheme);
+});
 
-  localStorage.setItem("theme", themeNew);
-}
-
-switcher.addEventListener("click", changeTheme);
+console.log("Script init...");
