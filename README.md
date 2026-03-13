@@ -16,7 +16,7 @@ This is my personal portfolio website, showcasing my skills and projects.
 
 - `HTML5`
 - `SCSS`
-- `JavaScript` (In progress)
+- `JavaScript`
 - `Vite`
 
 ## 💫 Features:
