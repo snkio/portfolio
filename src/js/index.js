@@ -1,6 +1,5 @@
 import "../scss/style.scss";
 import "./burger.js";
-import "./links.js";
 
 const html = document.documentElement;
 const switcher = document.querySelector("#toggletheme");
