@@ -29,7 +29,7 @@ html {
 body {
   font-family: "Geist", sans-serif;
   font-size: 1.6rem;
-  line-height: 1.6;
+  line-height: 1.5;
   background-color: var(--bk-main);
   color: var(--color-primary);
 }
@@ -50,10 +50,6 @@ h6 {
 a {
   text-decoration: none;
   color: var(--color-primary);
-}
-
-.act {
-  color: #008080;
 }
 
 .container {
@@ -292,7 +288,6 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-
     justify-items: center;
   }
 
@@ -318,16 +313,7 @@ a {
     &:hover {
       transform: translateY(-4px);
       border: 2px solid rgb(var(--bk-purple));
-
-      .skill__subtitle span {
-        transform: rotate(20deg) scale(1.1);
-      }
     }
-  }
-
-  &__list:nth-of-type(2) {
-    --bk-purple: 108, 74, 182;
-    --bk-purpletwo: #3d2b63;
   }
 
   &__sheets {
@@ -343,12 +329,6 @@ a {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: bold;
-
-    span {
-      display: inline-block;
-      transform: rotate(0) scale(1);
-      transition: transform 0.3s ease;
-    }
   }
 
   &__elem {
