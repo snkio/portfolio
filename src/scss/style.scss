@@ -205,6 +205,7 @@ a {
 
   &__buttons {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
   }
@@ -553,7 +554,7 @@ a {
       display: block;
       position: absolute;
       right: 5rem;
-      bottom: 1rem;
+      bottom: 0.5rem;
     }
 
     &__list {
@@ -581,13 +582,19 @@ a {
   .contact__title {
     text-align: center;
   }
+
+  .hero {
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+    }
+  }
 }
 
 @media (max-width: 320px) {
-  .hero__title {
-    font-size: 4rem;
-  }
-
   .skill__info {
     grid-template-columns: 1fr;
   }
