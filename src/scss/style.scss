@@ -291,6 +291,7 @@ a {
   }
 
   &__list {
+    z-index: 1;
     padding: 32px;
     border: 2px solid rgba(var(--bk-accent), 0.2);
     background-color: var(--bk-card);
