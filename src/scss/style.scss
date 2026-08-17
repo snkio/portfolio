@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color-primary: #fff;
+  --color-primary: 255, 255, 255;
   --accent: #726e97;
   --bk-main: #05060d;
   --bk-header: rgba(6, 7, 14, 0.8);
@@ -27,7 +27,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   background-color: var(--bk-main);
-  color: var(--color-primary);
+  color: rgb(var(--color-primary));
 }
 
 body > :not(.header) {
@@ -45,7 +45,7 @@ h6 {
 
 a {
   text-decoration: none;
-  color: var(--color-primary);
+  color: rgb(var(--color-primary));
 }
 
 .container {
@@ -101,14 +101,14 @@ a {
     background: none;
     border: none;
     font-size: 2rem;
-    color: var(--color-primary);
+    color: rgb(var(--color-primary));
   }
 
   &__list {
     display: flex;
     list-style: none;
     gap: 10px;
-    color: var(--color-primary);
+    color: rgb(var(--color-primary));
   }
 
   &__link {
@@ -129,7 +129,7 @@ a {
     opacity: 0.6;
     transition: opacity 0.3s ease;
     margin-left: 10px;
-    color: var(--color-primary);
+    color: rgb(var(--color-primary));
     background: none;
     border: none;
 
@@ -219,7 +219,7 @@ a {
     padding: 16px 20px;
     border-radius: 99px;
     letter-spacing: 1px;
-    color: var(--color-primary);
+    color: rgb(var(--color-primary));
     transition: transform 0.3s ease;
 
     &:hover {
@@ -231,10 +231,10 @@ a {
     display: inline-block;
     font-size: 1.4rem;
     text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(var(--color-primary), 0.5);
     padding: 15px;
     border-radius: 99px;
-    color: var(--color-primary);
+    color: rgb(var(--color-primary));
     letter-spacing: 1px;
 
     scale: 1;
@@ -242,7 +242,7 @@ a {
     margin-right: 15px;
 
     &:hover {
-      border: 2px solid rgba(255, 255, 255, 0.8);
+      border: 2px solid rgba(var(--color-primary), 0.8);
     }
   }
 
@@ -331,12 +331,12 @@ a {
     background: var(--bk-main);
     border-radius: 99px;
     border: 1px solid transparent;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(var(--color-primary), 0.7);
     transition: border 0.3s ease-out;
 
     &:hover {
       border: 1px solid var(--bk-glow);
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(var(--color-primary), 0.9);
     }
   }
 }
@@ -514,12 +514,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-primary);
+    color: rgb(var(--color-primary));
     font-size: 1.4rem;
     margin-top: 2rem;
     padding: 0.8rem;
     width: 100%;
-    border: 1px solid var(--color-primary);
+    border: 1px solid rgb(var(--color-primary));
     border-radius: 99px;
 
     img {
@@ -603,8 +603,8 @@ a {
 
 [data-theme="light"] {
   --bk-header: rgba(235, 235, 235, 0.7);
-  --bk-main: #f2f2f2;
-  --color-primary: #161616;
+  --bk-main: #f2f5fc;
+  --color-primary: 22, 22, 22;
   --bk-card: #fff;
   --bk-stack: #ebebeb;
 }
